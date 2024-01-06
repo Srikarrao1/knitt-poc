@@ -8,13 +8,6 @@ const bitcoin = require('bitcoinjs-lib');
 // const request = require('request-promise');
 const ethers = require('ethers');
 
-function App() {
-const [mnemonics,setMnemonics]=useState('')
-const [btcAmount,setBtcAmount]=useState(5)
-const [btcAddress,setBtcAddress]=useState('')
-const [ethAddress,setEthAddress]=useState('')
-const [btcBalance,setbtcBalance]=useState('')
-
 
 // Configuration for connecting to your Bitcoin Core node
 const config = {
@@ -28,6 +21,15 @@ const config = {
 
 // Create a Bitcoin Core client
 const client = new bitcoinCore(config);
+
+function App() {
+const [mnemonics,setMnemonics]=useState('')
+const [btcAmount,setBtcAmount]=useState(5)
+const [btcAddress,setBtcAddress]=useState('')
+const [ethAddress,setEthAddress]=useState('')
+const [btcBalance,setbtcBalance]=useState('')
+
+
 
 async function handleMnemonics(value){
 setMnemonics(value);
